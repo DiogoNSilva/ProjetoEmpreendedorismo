@@ -1,0 +1,101 @@
+<!DOCTYPE html>  
+ <html> 
+     <meta charset="UTF-8"> 
+ <head> 
+     <title>Formulário</title> 
+
+     <link rel="stylesheet" href="../style/menu.css">
+     <link rel="stylesheet" href="../style/footer.css">
+     <link rel="stylesheet" href="../style/login.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@200&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+     <script>
+        function exibirMensagem() {
+            // Exibe a mensagem de sucesso
+            alert("Cadastro feito com sucesso!");
+
+            setTimeout(function() {
+                window.location.href = "./index.html";
+            }, 0);
+        }
+
+    </script>
+
+ </head> 
+ <body> 
+    <header>
+        <a href="./index.html"><img src="../img/logo.png" alt="logo" id="logo"></a>
+        <nav id="nav">
+            <button id="btnMobile">MENU</button>
+            <ul id="menu">
+                <li><a href="./login.html" target="">LOGIN</a></li>
+                <li><a href="./quemsomos.html" target="">QUEM SOMOS</a></li>
+                <li><a href="./trabalheconosco.html" target="">TRABALHE CONOSCO</a></li>
+                <li><a href="./contato.html" target="">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+     <div class="titulo"> 
+     <h1>Cadastre-se</h1> 
+     </div> 
+     <section id="content">
+        <form action="#" onsubmit="event.preventDefault(); exibirMensagem();">
+            <label for="primeironome"> 
+                Nome:<br/> 
+                <input type="text" name="firstname" placeholder="Primeiro Nome" class="campotexto" autocomplete="off" minlength="2" required> 
+            </label> 
+            
+            <!-- Algumas pessoas não tem sobrenome, então não preciso do required aqui --> 
+    
+            <label for="sobrenome"> 
+                Sobrenome:<br> 
+                <input type="text" name="lastname" placeholder="Sobrenome" class="campotexto" autocomplete="off"> 
+            </label> 
+    
+            <label for="email"> 
+                E-mail:<br> 
+                <input type="email" name="email" placeholder="email@cliente" autocomplete="off" class="campotexto" required pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" title="enderecoemail"> 
+            </label> 
+    
+            <label for="senha"> 
+                Senha:<br> 
+                <input type="password" name="password" placeholder="Sua senha" class="campotexto" required> 
+            </label> 
+    
+            <label for="dtnascimento"> 
+                Data de Nascimento:<br> 
+                <input type="date" name="birthdate" class="campotexto" max="2021-11-23"> 
+            </label> 
+    
+            <label for="genero"> 
+                Gênero:<br> 
+                <select name="gender" id="genero" size="1"> 
+                    <option value="male">Masculino</option> 
+                    <option value="female">Feminino</option>  
+                    <option value="other">Outro</option>    
+                </select> 
+            </label>  
+            <br/> 
+            <div class="cadastro"> 
+                <input type="submit" name="submit" value="Cadastrar" id="botao"> 
+            </div> 
+        </form> 
+     </section>   
+     <footer>
+        <ul>
+            <li>Rua Limões Laranjas<br> n° 345 - São Paulo SP</li>
+            <li>11 912345678</li>
+            <li>sigmacommerce@gmail.com</li>
+        </ul>
+        <div>
+            <img src="../img/whatsapp.png" alt="">
+            <img src="../img/facebook.png" alt="">
+            <img src="../img/instagram.png" alt="">
+          </div>
+    </footer>
+     
+ </body> 
+ </html>
